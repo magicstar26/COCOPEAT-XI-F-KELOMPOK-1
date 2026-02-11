@@ -1,0 +1,19 @@
+name: Deploy Web
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Inject API Key
+        run: |
+          # Perintah ini akan mengganti teks REPLACE_ME_WITH_API_KEY dengan Secret dari GitHub
+          sed -i 's/REPLACE_ME_WITH_API_KEY/${{ secrets.GEMINI_API_KEY }}/g' index.html
+      - name: Deploy to GitHub Pages
+        # Bagian ini akan mengurus deployment otomatis
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
