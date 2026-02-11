@@ -134,6 +134,9 @@
             <a href="https://drive.google.com/drive/folders/1mRrCGii8sPQ0abcqlyZA6MV1WsRVXSU4?usp=drive_link" class="btn" target="_blank"><span class="icon">📊</span> Presentasi PPT</a>
             <a href="https://wa.me/082120809514" class="btn" target="_blank"><span class="icon">📱</span> contact person 1</a>
             <a href="https://wa.me/0882002153900" class="btn" target="_blank"><span class="icon">📱</span> contact person 2</a>
+            <div class="btn" onclick="showUserInfo()">
+            <span class="icon">ℹ️</span> Info Pengguna
+            </div>
             <div class="btn" onclick="toggleChat()" style="background: rgba(129, 199, 132, 0.3); border-color: var(--accent-green);">
                 <span class="icon">✨</span> Tanya cocopeat AI 
             </div>
@@ -164,7 +167,13 @@
         const chat = document.getElementById('chat-window');
         chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
     }
-
+    function showUserInfo() {
+        alert("Informasi Proyek P5:\n\n" +
+              "Dibuat Oleh: Kelompok 1 - Kelas XI-F\n" +
+              "Anggota: 10 Orang Siswa\n" +
+              "Topik: Pemanfaatan Cocopeat sebagai media tanam ramah lingkungan.\n\n" +
+              "Gunakan tombol 'Tanya cocopeat AI' untuk berdiskusi lebih lanjut!");
+    }
     async function sendMessage() {
         const input = document.getElementById('user-input');
         const box = document.getElementById('chat-box');
