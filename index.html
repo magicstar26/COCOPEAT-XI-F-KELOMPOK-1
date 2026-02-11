@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5 Project | Cocopeat Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-brown: #5d4037;
+            --accent-green: #81c784;
+            --glass: rgba(255, 255, 255, 0.15);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnxtB0tsfY5OyCd0KFa8q9FqV4GgUJf9Y-A&s') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            padding: 40px;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        p.subtitle {
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            background: var(--accent-green);
+            color: #1a1a1a;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(129, 199, 132, 0.4);
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>COCOPEAT P5</h1>
+        <p1 class="subtitle">Inovasi Media Tanam Ramah Lingkungan untuk Masa Depan Berkelanjutan</p>
+        <p2 class="subtitle">kelompok 1 I kelas XI-F</p2>        
+        <div class="grid-container">
+            <a href="https://drive.google.com/drive/folders/1zgG6RxzmMMIQVvTWqpI_sluKQ6BvmO2G?usp=sharing" class="btn" target="_blank">
+                <span class="icon">📄</span> Jurnal Proyek
+            </a>
+            <a href="https://drive.google.com/drive/folders/101dJncHsoZFc0DsxlW1xb2jCYdiL3fYp?usp=drive_link" class="btn" target="_blank">
+                <span class="icon">🎬</span> Video Pembuatan
+            </a>
+            <a href="https://drive.google.com/drive/folders/15NwEpFZ4lUAdAlRtHiaK5r_OuGEgy5vh?usp=drive_link" class="btn" target="_blank">
+                <span class="icon">📖</span> Leaflet
+            </a>
+            <a href="https://drive.google.com/drive/folders/1mRrCGii8sPQ0abcqlyZA6MV1WsRVXSU4?usp=drive_link" class="btn" target="_blank">
+                <span class="icon">📊</span> Presentasi PPT
+            </a>
+            <a href="https://wa.me/082120809514" class="btn" target="_blank">
+                <span class="icon">📱</span> Kontak Kami
+            </a>
+            <a href="" class="btn" target="_blank">
+                <span class="icon">📁</span> Arsip Lainnya
+            </a>
+        </div>
+
+        <div class="footer">
+            &copy; 2024 Project P5 - Tim Cocopeat Indonesia
+        </div>
+    </div>
+
+</body>
+</html>
