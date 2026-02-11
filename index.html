@@ -235,7 +235,7 @@
             const data = await response.json();
             document.getElementById(loadingId).innerText = data.candidates[0].content.parts[0].text;
         } catch (error) {
-            document.getElementById(loadingId).innerText = "Gagal memuat jawaban. Pastikan file config.js ada di folder lokal.";
+            document.getElementById(loadingId).innerText = "koneksi bermasalah atau API key bermasalah";
         }
         box.scrollTop = box.scrollHeight;
     }
