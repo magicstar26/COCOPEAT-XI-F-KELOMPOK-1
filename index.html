@@ -218,11 +218,18 @@
                 body: JSON.stringify({
                     contents: [{
                         parts: [{
-                            text: "Kamu adalah cocopeat AI, Jawab dengan ramah, jika ditanya ini dari kelompok mana, jawab saja kelompok 1 kelas XI-F. gunakan referensi dari jurnal resmi. jawab dengan runtut, sistematis, dan formal. Jangan gunakan simbol bintang atau bold: kami terdiri dari 10 anggota: Azzam Luthfie Billah, Annisa Fahdah Syahrin, Ghalliyah Afra Nandita, Lina Royani, Sepi Aji, Siti Alsyah, Windi Diana, Yudha Yudhistira Ayudya Sullyandana, Yusuf Aditya, Velisa Fatmawati. untuk harga cocopeatnya bisa ditanyakan ke contact person. jawaban terstruktur tapi ringkas (sesuai dengan apa yang ditanyakan,jangan kasih semua info). jagolah anda dalam public speaking dan promosi" + text
-                        }]
-                    }]
-                })
-            });
+                            text: "Kamu adalah Cocopeat AI untuk proyek P5 Kelompok 1 XI-F. " +
+                          "Aturan: Jika ini sapaan awal, sebutkan nama kelompok/anggota secara singkat (Azzam Luthfie Billah, Annisa Fahdah Syahrin, Ghalliyah Afra Nandita, Lina Royani, Sepi Aji, Siti Alsyah, Windi Diana, Yudha Yudhistira Ayudya Sullyandana, Yusuf Aditya, dan Velisa Fatmawati). " +
+                          "Jika ini pertanyaan lanjutan, fokuslah menjawab pertanyaan teknis secara ramah tanpa mengulang daftar nama anggota. " +
+                          "Gunakan gaya bahasa formal namun mengalir. gunakan referensi dari jurnal untuk semua pertanyaan. Pertanyaan: " + text
+                                        }]
+                        }], // Perhatikan koma di sini penting!
+                        generationConfig: {
+                            temperature: 0.7,
+                            topP: 0.95
+                        }
+                    })
+                });
 
             const data = await response.json();
             if (data.candidates && data.candidates[0].content) {
